@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#008069">
+    <title>WhatsApp Pro Platform</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fab fa-whatsapp wa-logo-loader pulse-anim"></i>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AMBIENT BG -->
+    <div class="ambient-glow">
+        <div class="tech-grid"></div>
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+        <div class="dust"></div>
+        <div class="dust"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header id="main-header">
+        <div class="nav-container">
+            <div class="logo-area">
+                <svg viewBox="0 0 33 33" class="wa-header-logo" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.6 0C7.5 0 0.1 7.4 0.1 16.5C0.1 19.4 0.9 22.1 2.3 24.5L0.5 31.1L7.3 29.3C9.6 30.6 12.1 31.2 14.8 31.2H14.9C24 31.2 31.4 23.8 31.4 14.7C31.4 10.8 29.9 7.1 27.1 4.3C24.3 1.5 20.6 0 16.6 0Z" fill="#25D366"/>
+                    <path d="M25.1 20.6C24.7 20.4 22.4 19.3 22 19.1C21.6 18.9 21.3 18.8 21 19.3C20.7 19.8 19.8 20.9 19.5 21.2C19.2 21.5 18.9 21.5 18.5 21.3C18.1 21.1 16.7 20.6 15.1 19.2C13.8 18 12.9 16.6 12.6 16.1C12.3 15.6 12.6 15.3 12.8 15.1C13 14.9 13.2 14.6 13.4 14.4C13.6 14.2 13.7 14 13.8 13.7C13.9 13.5 13.9 13.3 13.7 13C13.6 12.7 12.7 10.5 12.3 9.6C11.9 8.7 11.5 8.9 11.2 8.9C11 8.9 10.7 8.9 10.4 8.9C10.1 8.9 9.6 9 9.2 9.5C8.8 10 7.6 11.1 7.6 13.4C7.6 15.7 9.3 17.9 9.5 18.2C9.7 18.5 12.8 23.3 17.6 25.4C18.8 25.9 19.7 26.2 20.4 26.4C21.5 26.8 22.5 26.7 23.3 26.6C24.2 26.5 26 25.5 26.4 24.4C26.8 23.3 26.8 22.4 26.7 22.2C26.6 22 26 21.8 25.6 21.6H25.1V20.6Z" fill="white"/>
+                </svg>
+                <span class="logo-text">WhatsApp Pro</span>
+            </div>
+            
+            <nav class="desktop-nav">
+                <a href="#about" data-i18n="nav_about">О ПРОЕКТЕ</a>
+                <a href="#features" data-i18n="nav_features">ФУНКЦИИ</a>
+                <a href="#roadmap" data-i18n="nav_roadmap">ПЛАН</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="lang-btn" class="icon-btn round-btn">RU</button>
+                <button id="theme-btn" class="icon-btn round-btn"><i class="fas fa-moon"></i></button>
+                <button id="login-btn" class="primary-btn pulse-btn" data-i18n="btn_login">ВОЙТИ</button>
+                <div id="user-profile-icon" class="user-profile-icon hidden">
+                    <img src="https://via.placeholder.com/40" alt="User">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="scroll-container">
+        <!-- 1. HERO (Эффект Левитации) -->
+        <section class="section hero-container">
+            <div class="wa-card reveal hero-levitate">
+                <div class="video-wrapper">
+                    <video id="content-video" controls playsinline poster="https://via.placeholder.com/1920x1080/cfe9da/008069?text=WhatsApp+Video">
+                        <source src="video1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="wa-card-body">
+                    <div class="chat-header-info">
+                        <h1 class="video-title" data-i18n="hero_title">Платформа WhatsApp Style</h1>
+                        <span class="message-time" data-i18n="hero_date">V 2.0 • 2026</span>
+                    </div>
+                    <div class="stats-group">
+                        <div class="stat-pill">
+                            <i class="fas fa-eye"></i> <span id="view-count">0</span>
+                        </div>
+                        <button id="like-btn" class="stat-pill interactive">
+                            <i class="fas fa-heart"></i> <span id="like-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT (Обычный) -->
+        <section id="about" class="section reveal">
+            <div class="wa-card">
+                <div class="wa-card-header">
+                    <span class="section-title-sm" data-i18n="badge_about">О ПРОЕКТЕ</span>
+                </div>
+                <div class="wa-card-body grid-2-col">
+                    <div class="text-content">
+                        <h2 data-i18n="about_title">Революция контента</h2>
+                        <p data-i18n="about_desc">Сквозное шифрование и конфиденциальность ваших данных.</p>
+                        <div class="stats-row">
+                            <div class="stat-item"><h3>10K+</h3><p data-i18n="stat_users">Контакты</p></div>
+                            <div class="stat-item"><h3>500+</h3><p data-i18n="stat_projects">Группы</p></div>
+                        </div>
+                    </div>
+                    <div class="image-content">
+                        <img src="https://via.placeholder.com/600x400/ece5dd/008069?text=Secure+Chat" alt="About">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. GALLERY (Эффект Spotlight/Подсветка) -->
+        <section id="gallery" class="section reveal">
+            <h2 class="section-header" data-i18n="gallery_title">Галерея</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item wa-card spotlight-effect">
+                    <img src="https://via.placeholder.com/400x300/111/fff?text=Dashboard" alt="UI">
+                    <div class="gallery-overlay"><h3 data-i18n="gal_1_title">Дашборд</h3></div>
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item wa-card spotlight-effect">
+                    <img src="https://via.placeholder.com/400x300/222/fff?text=Analytics" alt="UI">
+                    <div class="gallery-overlay"><h3 data-i18n="gal_2_title">Аналитика</h3></div>
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item wa-card spotlight-effect">
+                    <img src="https://via.placeholder.com/400x300/333/fff?text=Mobile" alt="UI">
+                    <div class="gallery-overlay"><h3 data-i18n="gal_3_title">Мобильность</h3></div>
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item wa-card spotlight-effect">
+                    <img src="https://via.placeholder.com/400x300/444/fff?text=Settings" alt="UI">
+                    <div class="gallery-overlay"><h3 data-i18n="gal_4_title">Настройки</h3></div>
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FEATURES (Эффект Hover Lift/Подъем) -->
+        <section id="features" class="section reveal">
+            <h2 class="section-header" data-i18n="features_title">Возможности</h2>
+            <div class="features-grid">
+                <div class="feature-card wa-card hover-lift">
+                    <i class="fas fa-bolt accent-icon"></i>
+                    <h3 data-i18n="feat_1_title">Скорость</h3>
+                    <p data-i18n="feat_1_desc">Мгновенная доставка.</p>
+                </div>
+                <div class="feature-card wa-card hover-lift">
+                    <i class="fas fa-shield-alt accent-icon"></i>
+                    <h3 data-i18n="feat_2_title">Защита</h3>
+                    <p data-i18n="feat_2_desc">Шифрование данных.</p>
+                </div>
+                <div class="feature-card wa-card hover-lift">
+                    <i class="fas fa-magic accent-icon"></i>
+                    <h3 data-i18n="feat_3_title">AI</h3>
+                    <p data-i18n="feat_3_desc">Умные боты.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ROADMAP (Эффект Scale & Focus/Увеличение) -->
+        <section id="roadmap" class="section reveal">
+            <h2 class="section-header" data-i18n="roadmap_title">План</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="tm-dot"></div>
+                    <div class="tm-content wa-card hover-scale">
+                        <span class="tm-date">Q1 2026</span>
+                        <h3 data-i18n="rm_1_title">Запуск Беты</h3>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="tm-dot"></div>
+                    <div class="tm-content wa-card hover-scale">
+                        <span class="tm-date">Q2 2026</span>
+                        <h3 data-i18n="rm_2_title">Мобильное Приложение</h3>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="tm-dot future"></div>
+                    <div class="tm-content wa-card hover-scale">
+                        <span class="tm-date">Q4 2026</span>
+                        <h3 data-i18n="rm_3_title">Глобальный Рост</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CHAT -->
+        <section id="comments" class="section reveal">
+            <div class="chat-container wa-card">
+                <div class="chat-header">
+                    <div class="user-avatar-placeholder"><i class="fas fa-users"></i></div>
+                    <div class="chat-info">
+                        <h3 data-i18n="comments_title">Общий чат</h3>
+                        <span class="status">online</span>
+                    </div>
+                </div>
+                <div id="comments-list" class="chat-body">
+                    <!-- JS fills this -->
+                    <div class="date-divider"><span>СЕГОДНЯ</span></div>
+                </div>
+                <div class="chat-input-area">
+                    <button class="emoji-btn"><i class="far fa-smile"></i></button>
+                    <div class="input-wrapper">
+                        <input type="text" id="comment-input" placeholder="Введите сообщение" data-i18n="comment_placeholder">
+                    </div>
+                    <button id="send-comment" class="mic-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section id="faq" class="section reveal">
+            <div class="wa-card">
+                <div class="wa-card-header">FAQ</div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question"><span data-i18n="faq_1_q">Доступ?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p data-i18n="faq_1_a">По номеру телефона.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question"><span data-i18n="faq_2_q">Бесплатно?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p data-i18n="faq_2_a">Да, абсолютно.</p></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="socials-wrapper" style="margin-top: 30px; text-align: center;">
+                <h2 class="section-header" data-i18n="social_title">Мы в соцсетях</h2>
+                <div class="social-grid">
+                    <a href="#" class="social-card wa"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-card tg"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" class="social-card ig"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 WhatsApp Pro.</p>
+        </footer>
+    </main>
+
+    <!-- MODALS -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content wa-card">
+            <div class="modal-header-wa">
+                <h2 data-i18n="modal_login_title">Вход</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <form id="login-form" class="wa-form">
+                <div class="wa-input-group">
+                    <label data-i18n="ph_email">Email</label><input type="email" required>
+                </div>
+                <div class="wa-input-group">
+                    <label data-i18n="ph_password">Пароль</label><input type="password" required>
+                </div>
+                <button type="submit" class="wa-btn-full" data-i18n="btn_enter">ВОЙТИ</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="profile-modal" class="modal">
+        <div class="modal-content wa-card">
+            <div class="modal-header-wa">
+                <h2 data-i18n="modal_settings_title">Настройки</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="profile-settings">
+                <div class="setting-item">
+                    <span data-i18n="st_notif">Уведомления</span><input type="checkbox" checked>
+                </div>
+                <button id="logout-btn" class="wa-btn-full danger-btn" data-i18n="btn_logout">ВЫЙТИ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>
